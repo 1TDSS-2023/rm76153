@@ -3,6 +3,7 @@ const lista = document.querySelector(".lista");
 const imagem = document.querySelector("#imagem");
 const lobos = ["./img/lobo1.jpg", "./img/lobo2.jpg", "./img/lobo3.jpg"];
 const pElement = document.querySelector("#pMensagem");
+const qualquerElement = document.querySelectorAll("*");
 
 cor.addEventListener("click", function () {
   let r = 0,
@@ -31,4 +32,9 @@ mudar.addEventListener("click", function () {
 
 mensagem.addEventListener("click", function () {
   pElement.textContent = "Ola professor!";
+});
+
+sumir.addEventListener("click", function () {
+  let qualquer = Math.round(Math.random() * qualquerElement.length);
+  qualquerElement[qualquer].style.display = "none";
 });
