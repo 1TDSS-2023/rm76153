@@ -1,5 +1,7 @@
 const bodyElement = document.querySelectorAll(".Corpo");
 const lista = document.querySelector(".lista");
+const imagem = document.querySelector("#imagem");
+lobos = ["./img/lobo1.jpg", "./img/lobo2.jpg", "./img/lobo3.jpg"];
 
 cor.addEventListener("click", function () {
   let r = 0,
@@ -19,4 +21,9 @@ enviar.addEventListener("click", function (event) {
   const newItem = document.createElement("li");
   newItem.textContent = valor;
   lista.appendChild(newItem);
+});
+
+mudar.addEventListener("click", function () {
+  let lobo = Math.round(Math.random() * 2);
+  imagem.src = lobos[lobo];
 });
